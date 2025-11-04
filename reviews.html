@@ -5,23 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Customer Reviews | Food Delivery</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
   <style>
     body { font-family: 'Poppins', sans-serif; }
     .navbar { background-color: #dc3545; }
-    .card {
+    
+    .review-card {
       border-radius: 0.5rem;
+      padding: 25px;
       transition: transform 0.3s, box-shadow 0.3s;
+      background: #fff;
     }
-    .card:hover {
+    .review-card:hover {
       transform: translateY(-5px);
       box-shadow: 0 10px 20px rgba(0,0,0,0.2);
     }
-    .review-stars {
-      color: #ffc107;
-      font-size: 1.2rem;
-    }
-    .card p {
-      margin-bottom: 0.5rem;
+
+    .review-stars { color: #ffc107; font-size: 1.3rem; }
+    .customer-img {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 10px;
+      border: 3px solid #dc3545;
     }
     footer { background-color: #dc3545; color: #fff; }
   </style>
@@ -35,13 +42,14 @@
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
       <span class="navbar-toggler-icon"></span>
     </button>
+
     <div class="collapse navbar-collapse" id="navMenu">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="menu.php">Menu</a></li>
-        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Reviews</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.php">About</a></li>
+        <li class="nav-item"><a class="nav-link active" href="reviews.php">Reviews</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>
       </ul>
     </div>
   </div>
@@ -50,28 +58,36 @@
 <!-- Reviews Section -->
 <section class="container py-5">
   <h1 class="text-danger text-center fw-bold mb-5">Customer Reviews</h1>
+
   <div class="row g-4">
+
     <div class="col-md-4">
-      <div class="card p-4 shadow-sm text-center">
+      <div class="review-card text-center shadow-sm">
+        <img src="images/user1.jpg" onerror="this.src='images/default-user.png'" class="customer-img">
         <p class="review-stars">⭐️⭐️⭐️⭐️⭐️</p>
-        <p class="mb-2">"Amazing food and super fast delivery!"</p>
+        <p>"Amazing food and super fast delivery!"</p>
         <h6 class="text-muted">- Priya Sharma</h6>
       </div>
     </div>
+
     <div class="col-md-4">
-      <div class="card p-4 shadow-sm text-center">
+      <div class="review-card text-center shadow-sm">
+        <img src="images/user2.jpg" onerror="this.src='images/default-user.png'" class="customer-img">
         <p class="review-stars">⭐️⭐️⭐️⭐️</p>
-        <p class="mb-2">"The pizza was hot and fresh. Loved it!"</p>
+        <p>"The pizza was hot and fresh. Loved it!"</p>
         <h6 class="text-muted">- Rahul Verma</h6>
       </div>
     </div>
+
     <div class="col-md-4">
-      <div class="card p-4 shadow-sm text-center">
+      <div class="review-card text-center shadow-sm">
+        <img src="images/user3.jpg" onerror="this.src='images/default-user.png'" class="customer-img">
         <p class="review-stars">⭐️⭐️⭐️⭐️⭐️</p>
-        <p class="mb-2">"Great service and delicious burgers!"</p>
+        <p>"Great service and delicious burgers!"</p>
         <h6 class="text-muted">- Ananya Rao</h6>
       </div>
     </div>
+
   </div>
 </section>
 
@@ -83,4 +99,5 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
 
