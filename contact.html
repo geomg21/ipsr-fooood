@@ -1,59 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Us | Food Delivery</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-    .navbar-brand {
-      font-size: 1.5rem;
-    }
-    .section-title {
-      font-size: 2.5rem;
-    }
-    .form-control {
-      border-radius: 0.35rem;
-    }
-    .btn-danger {
-      border-radius: 0.35rem;
-      padding: 0.6rem 1.5rem;
-    }
-    .contact-info h5 {
-      font-weight: 600;
-      margin-top: 1rem;
-    }
-    .contact-info p {
-      margin-bottom: 0.5rem;
-    }
-    iframe {
-      border-radius: 0.35rem;
-      margin-top: 1rem;
-    }
-    footer {
-      margin-top: 50px;
-    }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Contact | FoodX Delivery</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+  body {
+    font-family: "Poppins", sans-serif;
+    background: #f8f9fa;
+  }
+
+  .navbar {
+    background: #ff4d4f;
+  }
+
+  .navbar-brand {
+    font-weight: 700;
+    font-size: 1.6rem;
+  }
+
+  .section-title {
+    font-size: 2.6rem;
+    font-weight: 700;
+    color: #ff4d4f;
+  }
+
+  .contact-box {
+    background: #ffffff;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  }
+
+  .form-control {
+    border-radius: 8px;
+    padding: 12px;
+  }
+
+  .btn-danger {
+    background: #ff4d4f;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    transition: .3s ease;
+  }
+
+  .btn-danger:hover {
+    background: #d93b3d;
+    transform: translateY(-2px);
+  }
+
+  iframe {
+    border-radius: 10px;
+    margin-top: 10px;
+  }
+
+  footer {
+    background: #ff4d4f;
+    color: #fff;
+    padding: 15px;
+  }
+</style>
 </head>
 <body>
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+<nav class="navbar navbar-expand-lg navbar-dark">
   <div class="container">
-    <a class="navbar-brand fw-bold" href="index.html">🍴 Food Delivery</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <a class="navbar-brand" href="index.html">FoodX Delivery 🛵</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
+    <div class="collapse navbar-collapse" id="nav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
         <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
-        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Contact</a></li>
+        <li class="nav-item"><a class="nav-link active fw-semibold" href="#">Contact</a></li>
       </ul>
     </div>
   </div>
@@ -61,49 +88,58 @@
 
 <!-- Contact Section -->
 <section class="container py-5">
-  <h1 class="text-danger text-center fw-bold mb-5 section-title">Contact Us</h1>
+  <h1 class="text-center section-title mb-5">Contact Us</h1>
+
   <div class="row g-4">
+
     <!-- Contact Form -->
     <div class="col-md-6">
-      <form>
-        <div class="mb-3">
-          <input type="text" class="form-control" placeholder="Your Name" required>
-        </div>
-        <div class="mb-3">
-          <input type="email" class="form-control" placeholder="Your Email" required>
-        </div>
-        <div class="mb-3">
-          <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
-        </div>
-        <button type="submit" class="btn btn-danger">Send Message</button>
-      </form>
+      <div class="contact-box">
+        <h4 class="mb-3">Send us a Message</h4>
+        <form>
+          <div class="mb-3">
+            <input type="text" class="form-control" placeholder="Your Name" required>
+          </div>
+          <div class="mb-3">
+            <input type="email" class="form-control" placeholder="Your Email" required>
+          </div>
+          <div class="mb-3">
+            <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-danger w-100">Send Message</button>
+        </form>
+      </div>
     </div>
 
-    <!-- Contact Info & Map -->
-    <div class="col-md-6 contact-info">
-      <h5>📍 Address:</h5>
-      <p>123 Food Street, Chennai, India</p>
+    <!-- Contact Info -->
+    <div class="col-md-6">
+      <div class="contact-box">
+        <h4>Get in Touch</h4>
+        <p>📍 123 Food Street, Kochi, Kerala, India</p>
+        <p>📞 +91 94973 94428</p>
+        <p>✉️ support@foodxdelivery.com</p>
 
-      <h5>📞 Phone:</h5>
-      <p>+91 98765 43210</p>
+        <h5 class="mt-4 mb-2">Business Hours</h5>
+        <p>Mon - Sun : 9:00 AM - 11:00 PM</p>
 
-      <h5>✉️ Email:</h5>
-      <p>support@fooddelivery.com</p>
-
-      <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12..." 
-        width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
-      </iframe>
+        <!-- Map -->
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.233640309339!2d76.27692267507357!3d9.981635973137905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080d34bd19a011%3A0xbbb321cf0e64c861!2sKochi%2C%20Kerala!5e0!3m2!1sen!2sin!4v1709652654334"
+          width="100%" height="250" allowfullscreen loading="lazy">
+        </iframe>
+      </div>
     </div>
+
   </div>
 </section>
 
 <!-- Footer -->
-<footer class="bg-danger text-white text-center py-3">
-  <p class="mb-0">&copy; 2025 Food Delivery. All Rights Reserved.</p>
+<footer class="text-center">
+  <p class="mb-0">&copy; 2025 FoodX Delivery — All Rights Reserved</p>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
 
